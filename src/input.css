@@ -28,10 +28,8 @@
 }
 
 body {
-    background-image: linear-gradient(to right, --color-theo-black, --color-theo-teal);
-}
-
-body > div {
-    background-image: url(./res/bg-grid.svg);
-    /* mix-blend-mode: color-dodge; */
+    background-image: url(./res/bg-photo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
