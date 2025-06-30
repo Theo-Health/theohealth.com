@@ -33,3 +33,10 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+
+@media screen and (max-width: 500px) {
+  body {
+      background-position: left !important;
+  }
+}
