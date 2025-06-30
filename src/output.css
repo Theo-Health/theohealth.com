@@ -16,6 +16,8 @@
     --container-sm: 24rem;
     --container-4xl: 56rem;
     --text-base: 1rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
@@ -23,6 +25,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --blur-3xl: 64px;
@@ -342,6 +345,9 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -419,10 +425,6 @@
   .text-center {
     text-align: center;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -430,6 +432,10 @@
   .text-base\/7 {
     font-size: var(--text-base);
     line-height: calc(var(--spacing) * 7);
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -442,6 +448,10 @@
   .tracking-normal {
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
   }
   .text-balance {
     text-wrap: balance;
@@ -511,9 +521,9 @@
       max-width: var(--container-sm);
     }
   }
-  .sm\:py-16 {
+  .sm\:py-10 {
     @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 16);
+      padding-block: calc(var(--spacing) * 10);
     }
   }
   .sm\:text-4xl {
@@ -546,9 +556,9 @@
       padding-inline: calc(var(--spacing) * 8);
     }
   }
-  .lg\:py-16 {
+  .lg\:py-10 {
     @media (width >= 64rem) {
-      padding-block: calc(var(--spacing) * 16);
+      padding-block: calc(var(--spacing) * 10);
     }
   }
 }
@@ -567,7 +577,7 @@
   max-width: 100%;
 }
 body {
-  background-image: url(./res/bg-photo.png);
+  background-image: url(./res/bg-photo-weights.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
