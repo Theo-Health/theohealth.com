@@ -299,9 +299,6 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-items-center {
-    justify-items: center;
-  }
   .space-y-2 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -311,13 +308,6 @@
   }
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
-  }
-  .space-x-2 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
-    }
   }
   .space-x-10 {
     :where(& > :not(:last-child)) {
@@ -569,7 +559,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   body {
-    background-position: left;
+    background-position: right;
     background-image: url(./res/bg-photo-side.jpg);
   }
 }

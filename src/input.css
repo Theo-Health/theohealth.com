@@ -41,7 +41,7 @@ body {
 
 @media screen and (max-width: 500px) {
   body {
-      background-position: left;
+      background-position: right;
       background-image: url(./res/bg-photo-side.jpg);
   }
 }
