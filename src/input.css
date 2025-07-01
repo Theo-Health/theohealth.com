@@ -28,7 +28,6 @@
 }
 
 body {
-    background-image: url(./res/bg-photo-weights.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -36,11 +35,23 @@ body {
 @media screen and (min-width: 500px) {
     body {
         background-position: center;
+        background-image: url(./res/bg-photo-weights.jpg);
     }
 }
 
 @media screen and (max-width: 500px) {
   body {
       background-position: left;
+      background-image: url(./res/bg-photo-side.jpg);
   }
+}
+
+#socials > a > svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+#socials > a {
+    margin: 5px;
 }
