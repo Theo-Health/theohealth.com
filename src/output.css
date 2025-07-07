@@ -12,8 +12,7 @@
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-4xl: 56rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-sm: 0.875rem;
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
@@ -26,7 +25,8 @@
     --default-mono-font-family: var(--font-mono);
     --color-theo-black: #000F0F;
     --color-theo-green: rgb(1, 30, 31);
-    --color-theo-orange: rgb(238, 110, 35);
+    --color-theo-orange: #C2510E;
+    --color-theo-blue: #035E65;
   }
 }
 @layer base {
@@ -339,8 +339,8 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
+  .rounded-\[1vw\] {
+    border-radius: 1vw;
   }
   .rounded-md {
     border-radius: var(--radius-md);
@@ -353,14 +353,23 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-theo-blue {
+    border-color: var(--color-theo-blue);
+  }
   .border-theo-orange {
     border-color: var(--color-theo-orange);
   }
   .bg-theo-black {
     background-color: var(--color-theo-black);
   }
+  .bg-theo-blue {
+    background-color: var(--color-theo-blue);
+  }
   .bg-theo-green {
     background-color: var(--color-theo-green);
+  }
+  .bg-theo-orange {
+    background-color: var(--color-theo-orange);
   }
   .bg-linear-to-tr {
     --tw-gradient-position: to top right;
@@ -386,8 +395,8 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .px-3\.5 {
-    padding-inline: calc(var(--spacing) * 3.5);
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -414,9 +423,9 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+  .text-sm\/6 {
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 6);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -451,6 +460,13 @@
     --tw-blur: blur(var(--blur-3xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .hover\:border-theo-blue {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-theo-blue);
+      }
+    }
+  }
   .hover\:border-theo-orange {
     &:hover {
       @media (hover: hover) {
@@ -458,10 +474,45 @@
       }
     }
   }
+  .hover\:border-white {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:bg-theo-blue {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-theo-blue);
+      }
+    }
+  }
   .hover\:bg-theo-orange {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-theo-orange);
+      }
+    }
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-theo-blue {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-theo-blue);
+      }
+    }
+  }
+  .hover\:text-theo-orange {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-theo-orange);
       }
     }
   }
@@ -570,6 +621,11 @@ body {
 }
 #socials > a {
   margin: 5px;
+  color: white;
+}
+.contact-us-row {
+  border: 0;
+  padding-left: 5px;
 }
 @property --tw-translate-x {
   syntax: "*";

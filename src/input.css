@@ -5,7 +5,8 @@
     --color-theo-black: #000F0F;
     --color-theo-teal: #003236;
     --color-theo-green: rgb(1, 30, 31);
-    --color-theo-orange: rgb(238, 110, 35);
+    --color-theo-orange: #C2510E;
+    --color-theo-blue: #035E65;
 }
 
 /* Aspect-ratio sensitive scaling of the video player */
@@ -54,4 +55,11 @@ body {
 
 #socials > a {
     margin: 5px;
+    color: white;
+}
+
+
+.contact-us-row {
+    border: 0;
+    padding-left: 5px;
 }
