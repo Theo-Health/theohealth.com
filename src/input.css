@@ -47,6 +47,14 @@ body {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .ctas > a {
+      display: block;
+      margin-top: 15px;
+  }
+}
+
+
 #socials > a > svg {
     width: 24px;
     height: 24px;
@@ -57,7 +65,6 @@ body {
     margin: 5px;
     color: white;
 }
-
 
 .contact-us-row {
     border: 0;

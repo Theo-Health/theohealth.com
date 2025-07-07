@@ -309,9 +309,6 @@
   .gap-x-3 {
     column-gap: calc(var(--spacing) * 3);
   }
-  .gap-x-6 {
-    column-gap: calc(var(--spacing) * 6);
-  }
   .space-x-10 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -463,13 +460,6 @@
     --tw-blur: blur(var(--blur-3xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .hover\:border-theo-blue {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-theo-blue);
-      }
-    }
-  }
   .hover\:border-theo-orange {
     &:hover {
       @media (hover: hover) {
@@ -481,13 +471,6 @@
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-white);
-      }
-    }
-  }
-  .hover\:bg-theo-blue {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-theo-blue);
       }
     }
   }
@@ -571,9 +554,24 @@
       }
     }
   }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
   .lg\:flex-1 {
     @media (width >= 64rem) {
       flex: 1;
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:justify-center {
+    @media (width >= 64rem) {
+      justify-content: center;
     }
   }
   .lg\:px-8 {
@@ -615,6 +613,12 @@ body {
   body {
     background-position: right;
     background-image: url(./res/bg-photo-side.jpg);
+  }
+}
+@media screen and (max-width: 640px) {
+  .ctas > a {
+    display: block;
+    margin-top: 15px;
   }
 }
 #socials > a > svg {
